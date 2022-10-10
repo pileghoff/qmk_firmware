@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_LOWER] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, _______, _______,
-  _______, DK_CIRC, DK_EXLM, DK_UNDS, DK_COLN, _______,                   _______,   DK_RPRN, DK_RCBR, DK_LBRC, DK_SCLN,  _______,
+  _______, DK_CIRC, DK_EXLM, DK_UNDS, DK_COLN, _______,                   _______,   DK_RPRN, DK_RCBR, DK_RBRC, DK_SCLN,  _______,
   _______,   DK_AT, DK_HASH, DK_MINS,  DK_DOT, _______,                   _______,  DK_LPRN, DK_LCBR, DK_LBRC, DK_COMM, _______,
   _______,  DK_GRV, DK_ASTR, DK_RABK, DK_LABK, _______, _______, _______, _______,  DK_SLSH, DK_BSLS, DK_PIPE, _______, _______,
                              _______, _______, _______, _______, _______, _______, _______, _______
