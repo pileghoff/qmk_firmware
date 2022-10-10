@@ -1,6 +1,7 @@
 #include QMK_KEYBOARD_H
 #include "keymap_danish.h"
 
+
 enum layer_number {
   _QWERTY = 0,
   _LOWER,
@@ -17,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
- * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|   [   |    |  del  |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI |LOWER | /Space  /       \Enter \  |RAISE |BackSP| RGUI |
@@ -29,10 +30,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_ESC,   DK_1,   DK_2,    DK_3,    DK_4,    DK_5,                     DK_6,    DK_7,    DK_8,    DK_9,    DK_0,     DK_GRV,
   KC_TAB,   DK_Q,   DK_W,    DK_F,    DK_P,    DK_B,                     DK_J,    DK_L,    DK_U,    DK_Y,    DK_OSTR,  DK_ARNG,
   KC_LCTRL, DK_A,   DK_R,    DK_S,    DK_T,    DK_G,                     DK_M,    DK_N,    DK_E,    DK_I,    DK_O,     DK_AE,
-  KC_LSFT,  DK_Z,   DK_X,    DK_C,    DK_D,    DK_V, DK_LBRC,  DK_RBRC,  DK_K,    DK_H,    DK_COMM, DK_DOT,  DK_MINS,  CAPS_WORD,
+  OSM(MOD_LSFT),  DK_Z,   DK_X,    DK_C,    DK_D,    DK_V, DK_LBRC,  KC_DEL,   DK_K,    DK_H,    DK_COMM, DK_DOT,  DK_MINS,  CAPS_WORD,
                         KC_LALT, KC_LGUI, OSL(_LOWER), KC_SPC, KC_ENT, OSL(_RAISE), KC_BSPC, KC_RGUI
 ),
-
 
 /* LOWER
  * ,-----------------------------------------.                    ,-----------------------------------------.

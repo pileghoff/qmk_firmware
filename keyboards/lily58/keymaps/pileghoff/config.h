@@ -26,9 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-#define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 100
-
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 27
@@ -44,3 +41,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_SLEEP
 */
+
+// Settings for One Shot Mods (i.e, OSM()).
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 300
+#define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped this number of times again. */
+#define ONESHOT_TIMEOUT 3000  /* Time (in ms) before the one shot key is released */
