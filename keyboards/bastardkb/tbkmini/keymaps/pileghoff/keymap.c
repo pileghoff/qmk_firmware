@@ -89,3 +89,17 @@ bool caps_word_press_user(uint16_t keycode) {
             return false; // Deactivate Caps Word.
     }
 }
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    // Get the current state of all modifiers
+    uint8_t mods = get_mods();
+
+    // Check if either Left or Right Ctrl is being held down
+    if ((mods & MOD_MASK_CTRL) != 0 || (mods & MOD_MASK_GUI) != 0) {
+        return 100;
+    }
+
+    // If Ctrl is NOT held, or for any key not listed above,
+    // always return your preferred long tapping term.
+    return TAPPING_TERM; // This is your 1000ms default
+}
